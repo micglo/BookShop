@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-BookShop.Web-20160719061905.mdf;Initial Catalog=aspnet-BookShop.Web-20160719061905;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Michal\\Documents\\Projekty\\bookshop\\BookShop\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="BookShopDbLocal-Web.config Connection String" description="BookShopDbLocal Connection String used in web.config by the application to access the database." defaultValue="Data Source=ASUS-R510JK;Initial Catalog=BookShopDb;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Michal\\Documents\\Projekty\\bookshop\\BookShop\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookShopDbLocal']/@connectionString" />
+  </parameter>
+  <parameter name="BookShopDbAzure-Web.config Connection String" description="BookShopDbAzure Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:bookshopdbserver.database.windows.net,1433;Initial Catalog=BookshopDb;Persist Security Info=False;User ID=michalglowaczewski;Password=P@$$w0rd1;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Michal\\Documents\\Projekty\\bookshop\\BookShop\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookShopDbAzure']/@connectionString" />
+  </parameter>
+  <parameter name="BookShop.Data.Sql.ApplicationDbContext-Web.config Connection String" description="BookShop.Data.Sql.ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="BookShop.Data.Sql.ApplicationDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Michal\\Documents\\Projekty\\bookshop\\BookShop\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookShop.Data.Sql.ApplicationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,16 @@
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\bin\Release\BookShop.Data.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\bin\Release\BookShop.Data.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\obj\Release\BookShop.Data.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Data\obj\Release\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Release\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Release\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\obj\Release\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\obj\Release\BookShop.Data.pdb

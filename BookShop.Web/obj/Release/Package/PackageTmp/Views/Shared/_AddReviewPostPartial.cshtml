@@ -1,0 +1,32 @@
+﻿@model BookShop.Models.ViewModels.ReviewViewModel
+
+@if (!string.IsNullOrEmpty(Model.LoginErrorMessage))
+{
+    <div class="row" style="padding-bottom: 15px;">
+        <div class="col-md-12 text-center text-danger">
+            @Model.LoginErrorMessage
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            @Html.ActionLink("Zaloguj się", "Login", "Account", new { returnUrl = Model.ReturnUrl }, null)
+        </div>
+    </div>
+}
+else if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="row" style="padding-bottom: 15px;">
+        <div class="col-md-12 text-center text-danger">
+            @Model.ErrorMessage
+        </div>
+    </div>
+}
+else if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <div class="row" style="padding-bottom: 15px;">
+        <div class="col-md-12 text-center">
+            <h4 class="text-center text-success">@Model.SuccessMessage</h4>
+        </div>
+    </div>
+}
+

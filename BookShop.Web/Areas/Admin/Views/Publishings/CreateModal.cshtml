@@ -1,0 +1,71 @@
+﻿@model BookShop.Data.Publishing
+
+<div class="modal fade" id="createPublishingModal" tabindex="-1" role="dialog" aria-labelledby="createPublishingModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Dodaj nowe wydawnictwo</h4>
+            </div>
+            @using (Ajax.BeginForm("CreatePublishingPost", "Publishings", null, new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnSuccess = "showCreatePublishingResult"
+            }, new { id = "createPublishingForm" }))
+            {
+                <div class="modal-body">
+                    <div id="createPublishingResult">
+                    </div>
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Name)
+                                @Html.TextBoxFor(m => m.Name, new { rows = 4, @class = "form-control", placeholder = "Nazwa wydawnictwa",
+                                title = "Napisz nazwe wydawnictwa. Maksymalnie 100 znaków", id = "createPublishingName" })
+                                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.NameForDisplay)
+                                @Html.TextBoxFor(m => m.NameForDisplay, new { rows = 4, @class = "form-control", placeholder = "Nazwa wydawnictwa, którą wyświetlimy",
+                                title = "Nazwa wydawnictwa bez polskich znaków i spacji. Maksymalnie 100 znaków", id = "createPublishingNameForDisplay" })
+                                @Html.ValidationMessageFor(m => m.NameForDisplay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Image)
+                                @Html.TextBoxFor(m => m.Image, new { rows = 4, @class = "form-control", placeholder = "Link do zdjęcia", title = "Link do zdjęcia",
+                                id = "createPublishingImage" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Description)
+                                @Html.TextAreaFor(m => m.Description, new { rows = 4, @class = "form-control", placeholder = "Opis wydawnictwa",
+                                title = "Napisz kilka słów o wydawnictwie", id = "createPublishingDescription" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Utwórz" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

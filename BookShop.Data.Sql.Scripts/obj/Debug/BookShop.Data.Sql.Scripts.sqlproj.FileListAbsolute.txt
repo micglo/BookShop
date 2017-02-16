@@ -1,0 +1,32 @@
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dacpac
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\Model.xml
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\refactor.xml
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\postdeploy.sql
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\predeploy.sql
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dacpac
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\Model.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\refactor.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\postdeploy.sql
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\predeploy.sql
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dacpac
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\Model.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\refactor.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\postdeploy.sql
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\predeploy.sql
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dacpac
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql.Scripts\bin\Debug\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql.Scripts\obj\Debug\BookShop.Data.Sql.Scripts.pdb

@@ -1,0 +1,7 @@
+﻿@model BookShop.Data.PublishingReview
+
+<div style="padding: 5px 15px;">
+    @Html.ActionLink(Model.Publishing.NameForDisplay, "GetPublishing", "Publishing",
+                               new { name = Model.Publishing.Name }, null)
+</div>
+@Html.Action("PublishingReviewSummaryPartial", "PublishingReview", Model)

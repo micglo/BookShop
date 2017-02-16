@@ -1,0 +1,75 @@
+﻿@using BookShop.Models.ViewModels.Account
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = "Nowe konto";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            Załóż nowe konto
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+<div id="message"></div>
+
+@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions
+{
+    HttpMethod = "POST",
+    OnSuccess = "showMessage"
+}, new { id = "registerForm"}))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Adres email", title = "Twój adres email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Hasło", title = "Hasło musi zawierać conajmniej 6 dowolnych znaków" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Potwierdź hasło", title = "Hasło musi zawierać conajmniej 6 dowolnych znaków i być takie samo jak podane w polu \"Hasło\"" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            <div class="form-group text-center">
+                <input class="btn btn-success" type="submit" value="Załóż"/>
+            </div>
+        </div>
+    </div> 
+}
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    <script>
+        $(function () {
+            myFormValidation('registerForm');
+        });
+    </script>
+}

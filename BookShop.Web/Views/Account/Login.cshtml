@@ -1,0 +1,104 @@
+﻿@using BookShop.Models.ViewModels.Account
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Zaloguj";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            Użyj lokalnego konta, aby się zalogować
+        </h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+@if (Model.Errors.Any())
+{
+    foreach (var error in Model.Errors)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center text-danger">@error</h4>
+            </div>
+        </div>
+    }
+}
+
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { role = "form", id = "loginForm" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Adres email", title = "Twoj adres email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Hasło", title = "Twoje hasło" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="checkbox">
+                @Html.CheckBoxFor(m => m.RememberMe, new { style = "margin-left: 0;", @for = "rememberMeCheckBox" })
+                @Html.LabelFor(m => m.RememberMe, new { id = "rememberMeCheckBox" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5 text-center">
+            <input type="submit" value="Zaloguj" class="btn btn-success"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+            <p>
+                @Html.ActionLink("Zapomniałeś hasła?", "ForgotPassword")
+            </p>
+            <p>
+                @Html.ActionLink("Załóż nowe konto", "Register")
+            </p>
+            <p>
+                @Html.ActionLink("Prześlij link aktywacyjny jeszcze raz", "ResendEmailConfirmation")
+            </p>
+        </div>
+    </div>
+}
+@Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = Model.ReturnUrl })
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    <script>
+        $(function () {
+            myFormValidation('loginForm');
+        });
+    </script>
+}

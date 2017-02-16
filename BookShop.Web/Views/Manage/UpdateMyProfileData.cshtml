@@ -1,0 +1,132 @@
+﻿@model BookShop.Models.ViewModels.Account.UserDataPostViewModel
+
+@{
+    ViewBag.Title = "Zmień moj profil";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Moje konto", "Index", "Manage")
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            @ViewBag.Title
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+<div id="message"></div>
+
+@using (Ajax.BeginForm("UpdateMyProfileDataPost", "Manage", null, new AjaxOptions
+{
+    HttpMethod = "POST",
+    OnSuccess = "showMessage"
+}, new { id = "updateMyProfileDataForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=>m.Email)
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "Imię", title = "Podaj swoje imie. Maksymalnie 50 znaków." })
+                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Nazwisko", title = "Podaj swoje nazwisko. Maksymalnie 50 znaków." })
+                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                Adres, na który wyślemy twoje zakupy
+            </h3>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 15px;">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Street)
+                @Html.TextBoxFor(m => m.Street, new { @class = "form-control", placeholder = "Ulica wraz z numerem", title = "Podaj ulicę wraz z numerem. Maksymalnie 50 znaków." })
+                @Html.ValidationMessageFor(m => m.Street, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.City)
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "Miejscowość", title = "Podaj miejscowość. Maksymalnie 50 znaków." })
+                @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.PostCode)
+                @Html.TextBoxFor(m => m.PostCode, new { @class = "form-control", placeholder = "Kod pocztowy w formacie xx-xxx", title = "Podaj kod pocztowy w formacie xx-xxx" })
+                @Html.ValidationMessageFor(m => m.PostCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.PhoneNumber) (opcjonalnie)
+                <div class="input-group">
+                    <span class="input-group-addon">+</span>
+                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "Numer telefonu", title = "Podaj numer telefonu w razie potrzeby kontaktu. Numer składa się z 11 cyfr", type = "number" })
+                </div>
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="checkbox">
+                @Html.CheckBoxFor(m => m.IsCompany, new { id = "isCompany", style = "margin-left: 0;" })
+                @Html.LabelFor(m => m.IsCompany, new { @for = "isCompany" })
+            </div>
+        </div>
+    </div>
+    <div id="companyData">
+    </div>
+    <div class="row" style="padding-bottom: 20px;">
+        <div class="col-md-2 col-md-offset-5 text-center">
+            <input type="submit" value="Zmień" class="btn btn-success" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    @Scripts.Render("~/bundles/updateMyProfileData")
+    <script>
+        $(function () {
+            myFormValidation('updateMyProfileDataForm');
+        });
+    </script>
+}

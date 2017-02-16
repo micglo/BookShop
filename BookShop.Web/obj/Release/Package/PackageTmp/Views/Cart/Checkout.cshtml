@@ -1,0 +1,25 @@
+﻿@model BookShop.Models.ViewModels.InfoViewModel
+
+@{
+    ViewBag.Title = "Finalizowanie transakcji";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center text-success">@Model.Message</h3>
+    </div>
+</div>
+

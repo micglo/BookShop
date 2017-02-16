@@ -1,0 +1,33 @@
+﻿@model BookShop.Models.ViewModels.Account.UserCompanyDataPostViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(m => m.CompanyName)
+            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", placeholder = "Nazwa firmy", title = "Podaj nazwe firmy, maksymalnie 50 znaków" })
+            @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Regon)
+            @Html.TextBoxFor(m => m.Regon, new { @class = "form-control", placeholder = "REGON", title = "Podaj REGON. REGON składa się z 9 cyfr", type = "number" })
+            @Html.ValidationMessageFor(m => m.Regon, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Nip)
+            @Html.TextBoxFor(m => m.Nip, new { @class = "form-control", placeholder = "NIP", title = "Podaj NIP. NIP składa się z 11 cyfr", type = "number" })
+            @Html.ValidationMessageFor(m => m.Nip, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+
+<script>
+        $(function () {
+            myFormValidation('updateMyProfileDataForm');
+        });
+</script>

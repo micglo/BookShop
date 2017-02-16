@@ -1,0 +1,37 @@
+﻿@model BookShop.Models.ViewModels.ShoppingCart.ShoppingCartViewModel
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Twoje zakupy</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cartModalResult">
+                    @Html.Partial("ModalIndex", Model)
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-6">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Kontunuj zakupy</button>
+                    </div>
+                    <div class="col-md-2">
+                        @using (Ajax.BeginForm("ClearCartModal", "Cart", new AjaxOptions
+                        {
+                            Url = Url.Action("ClearCartModal", "Cart"),
+                            HttpMethod = "GET",
+                            OnSuccess = "updateCartModal"
+                        }))
+                        {
+                            <input class="btn btn-danger" type="submit" value="Wyczyść koszyk" />
+                        }
+                    </div>
+                    <div class="col-md-2">
+                        <a href="@Url.Action("Index", "Cart", new {returnUrl = Request.Url?.PathAndQuery})" class="btn btn-success" id="finishShoppingModal">Dokonaj zakupu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,344 @@
+﻿@model BookShop.Models.ViewModels.Books.BookViewModel
+
+@{
+    ViewBag.Title = Model.TitleForDisplay;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <img src="@Model.Image" class="img-responsive img-thumbnail" alt="@Model.TitleForDisplay">
+    </div>
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="color: brown; margin-top: 0; margin-bottom: 0;">
+                    @Model.TitleForDisplay
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @if (Model.Author.Count > 1)
+                {
+                    <h3 style="margin-top: 0;">
+                        @foreach (var author in Model.Author)
+                        {
+                            @Html.ActionLink(author.FirstName + " " + author.LastNameForDisplay + ", ", "GetAuthor", "Author",
+                            new { id = author.Id, lastName = author.LastName }, null)
+
+                        }
+                    </h3>
+                }
+                else
+                {
+                    <h3 style="margin-top: 0;">
+                        @Html.ActionLink(Model.Author.Select(c => c.FirstName).SingleOrDefault() + " " + Model.Author.Select(c => c.LastNameForDisplay).SingleOrDefault(),
+                        "GetAuthor", "Author", new { id = Model.Author.Select(c => c.Id).SingleOrDefault(), lastName = Model.Author.Select(c => c.LastName).SingleOrDefault() },
+                        null)
+                    </h3>
+                }
+            </div>
+        </div>
+        @if (Model.Bestseller != null && Model.Bestseller.Value)
+        {
+            <div class="row" style="padding-left: 15px; padding-bottom: 10px;">
+                <div class="col-md-3 text-center bestseller">
+                    Bestseller
+                </div>
+            </div>
+        }
+        <div id="showVote">
+            @if (Model.BookReviews.Any())
+            {
+                @Html.Action("ShowVote", "BookReview", new { bookId = Model.BookId })
+            }
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            Wydawnictwo:
+                        </div>
+                        @if (Model.BookSize != null)
+                        {
+                            <div>
+                                Format:
+                            </div>
+                        }
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            @Html.ActionLink(Model.Publishing.NameForDisplay, "GetPublishing", "Publishing", new { name = Model.Publishing.Name }, null)
+                        </div>
+                        @if (Model.BookSize != null)
+                        {
+                            <div>
+                                @Model.BookSize
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-7 col-md-offset-2">
+                        <div>
+                            Rok wydania:
+                        </div>
+                        <div>
+                            Ilość stron:
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            @Model.PublishDate.Year
+                        </div>
+                        @if (Model.PageSize != null)
+                        {
+                            <div>
+                                @Model.PageSize
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <h3 style="margin-top: 0; margin-bottom: 5px; color: brown">
+                    @Model.Price
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-sm btn-success pull-right" onclick="addToCart('@Model.BookId');">Dodaj do koszyka</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-12">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#description" aria-controls="home" role="tab" data-toggle="tab">Opis</a></li>
+            <li role="presentation"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Szczegóły</a></li>
+            <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Recenzje</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="description">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-md-12">
+                        @Model.Description
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="details">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div>
+                                    Tytuł:
+                                </div>
+                                <div>
+                                    Autor:
+                                </div>
+                                <div>
+                                    Wydawnictwo:
+                                </div>
+                                <div>
+                                    Data wydania:
+                                </div>
+                                <div>
+                                    Język:
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div>
+                                    @Model.TitleForDisplay
+                                </div>
+                                <div>
+                                    @if (Model.Author.Count > 1)
+                                    {
+                                        foreach (var author in Model.Author)
+                                        {
+                                            @Html.ActionLink(author.FirstName + " " + author.LastNameForDisplay + ", ", "GetAuthor", "Author",
+                                            new { id = author.Id, lastName = author.LastName }, null)
+
+                                        }
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink(Model.Author.Select(c => c.FirstName).SingleOrDefault() + " " + Model.Author.Select(c => c.LastNameForDisplay).SingleOrDefault(),
+                                        "GetAuthor", "Author", new { id = Model.Author.Select(c => c.Id).SingleOrDefault(), lastName = Model.Author.Select(c => c.LastName).SingleOrDefault() },
+                                        null)
+                                    }
+                                </div>
+                                <div>
+                                    @Html.ActionLink(Model.Publishing.NameForDisplay, "GetPublishing", "Publishing", new { name = Model.Publishing.Name }, null)
+                                </div>
+                                <div>
+                                    @Model.PublishDate.ToString("d MMMM yyyy")
+                                </div>
+                                <div>
+                                    @Model.Language
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div>
+                                    ISBN:
+                                </div>
+                                @if (Model.Cover != "Brak")
+                                {
+                                    <div>
+                                        Oprawa:
+                                    </div>
+                                }
+                                @if (Model.PageSize != null)
+                                {
+                                    <div>
+                                        Ilość stron:
+                                    </div>
+                                }
+                                @if (Model.BookSize != null)
+                                {
+                                    <div>
+                                        Format:
+                                    </div>
+                                }
+                                <div>
+                                    Kategorie:
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div>
+                                    @Model.ISBN
+                                </div>
+                                @if (Model.Cover != "Brak")
+                                {
+                                    <div>
+                                        @Model.Cover
+                                    </div>
+                                }
+                                @if (Model.PageSize != null)
+                                {
+                                    <div>
+                                        @Model.PageSize
+                                    </div>
+                                }
+                                @if (Model.BookSize != null)
+                                {
+                                    <div>
+                                        @Model.BookSize
+                                    </div>
+                                }
+                                <div>
+                                    @foreach (var bookCategory in Model.BookCategories)
+                                    {
+                                        @Html.ActionLink(bookCategory.NameForDisplay + ", ", "GetBooksByBookCategory", new
+                                           {
+                                               mainCategoryName = bookCategory.SubMainCategory.MainCategory.Name,
+                                               subMainCategoryName = bookCategory.SubMainCategory.Name,
+                                               bookCategoryName = bookCategory.Name
+                                           }, null)
+                                    }
+                                </div>
+                                <div>
+                                    @foreach (var subMainCategory in Model.SubMainCategories)
+                                    {
+                                        @Html.ActionLink(subMainCategory.NameForDisplay + ", ", "GetBooksBySubMainCategory", new
+                                           {
+                                               mainCategoryName = subMainCategory.MainCategory.Name,
+                                               subMainCategoryName = subMainCategory.Name
+                                           }, null)
+                                    }
+                                </div>
+                                <div>
+                                    @Html.ActionLink(Model.SubMainCategories.First().MainCategory.NameForDisplay, "GetBooksBySubMainCategory", new
+                                       {
+                                           mainCategoryName = Model.SubMainCategories.First().MainCategory.Name
+                                       }, null)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="review">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-md-12 text-right">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBookReviewModal">
+                            Dodaj recenzje
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding: 15px;">
+                        <div id="bookReviews">
+                            @Html.Action("GetAllByBookId", "BookReview", new {bookId = Model.BookId})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action("AddBookReviewModal", "BookReview", new { bookId = Model.BookId, returnUrl = Request.Url.PathAndQuery })
+@Html.Action("EditBookReviewModal", "BookReview")
+@Html.Action("DeleteBookReviewModal", "BookReview")
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    @Scripts.Render("~/bundles/spinnerTabs")
+    @Scripts.Render("~/bundles/openBookReviewModals")
+    @Scripts.Render("~/bundles/singleBook")
+    <script type="text/javascript">
+        $.validator.setDefaults({
+            ignore: []
+        });
+    </script>
+    <script>
+        function updateBookReviews() {
+            var url = "/BookReview/GetAllByBookId?bookId=" + @Html.Raw(Model.BookId);
+            $.get(url,
+                function(result) {
+                    $('#bookReviews').html(result);
+                });
+        }
+
+        function updateVotes(id) {
+            var success = $('#' + id + '> div.row > div.col-md-12').find('h4.text-success');
+            if (success.length > 0) {
+                $.get('/BookReview/ShowVote?bookId=' + @Html.Raw(Model.BookId),
+                    function(data) {
+                        $('#showVote').html(data);
+                    });
+            }
+        }
+    </script>
+}

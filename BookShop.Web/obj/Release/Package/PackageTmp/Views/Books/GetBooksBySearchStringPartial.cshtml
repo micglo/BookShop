@@ -1,0 +1,31 @@
+﻿@using PagedList.Mvc
+@model BookShop.Models.ViewModels.Books.BooksBySearchStringViewModel
+
+<div class="row" style="padding: 15px;">
+    <div class="col-md-12 myBorder" style="padding-bottom: 15px;">
+        @foreach (var book in Model.Books)
+        {
+            @Html.Partial("_BookSummaryPartial", book)
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <br />
+        Strona @(Model.Books.PageCount < Model.Books.PageNumber ? 1 : Model.Books.PageNumber) z @Model.Books.PageCount
+        <div id="contentPager">
+            @Html.PagedListPager(Model.Books, page => Url.Action("GetBooksBySearchStringPartial", new
+       {
+           Page = page,
+           SearchString = Model.CurrentSearchString,
+           SearchOption = Model.CurrentSearchOption,
+           ItemsPerPage = Model.CurrentItemsPerPage,
+           SortOrder = Model.CurrentSortOrder
+       }))
+        </div>
+    </div>
+</div>
+
+
+

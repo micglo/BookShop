@@ -1,0 +1,72 @@
+﻿@model BookShop.Data.Author
+
+<div class="modal fade" id="createAuthorModal" tabindex="-1" role="dialog" aria-labelledby="createAuthorModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Dodaj nowego autora</h4>
+            </div>
+            @using (Ajax.BeginForm("CreateAuthorPost", "Authors", null, new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnSuccess = "showCreateAuthorResult"
+            }, new { id = "createAuthorForm"}))
+            {
+                <div class="modal-body">
+                    <div id="createAuthorResult">
+                    </div>
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.FirstName)
+                                @Html.TextBoxFor(m => m.FirstName, new { rows = 4, @class = "form-control", placeholder = "Imie autora",
+                                title = "Napisz imie autora. Maksymalnie 50 znaków", id = "createAuthorFirstName" })
+                                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.LastNameForDisplay)
+                                @Html.TextBoxFor(m => m.LastNameForDisplay, new { rows = 4, @class = "form-control", placeholder = "Nazwisko autora, które wyświetlimy",
+                                title = "Napisz nazwisko autora. Maksymalnie 50 znaków", id = "createAuthorLastNameForDisplay"  })
+                                @Html.ValidationMessageFor(m => m.LastNameForDisplay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.LastName)
+                                @Html.TextBoxFor(m => m.LastName, new { rows = 4, @class = "form-control", placeholder = "Nazwisko autora",
+                                title = "Nazwisko autora bez polskich znaków i spacji. Maksymalnie 50 znaków", id = "createAuthorLastName" })
+                                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Description)
+                                @Html.TextAreaFor(m => m.Description, new { rows = 4, @class = "form-control", placeholder = "Opis autora",
+                                title = "Napisz kilka słów o autorze", id = "createAuthorDescription" })
+                                @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Utwórz" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

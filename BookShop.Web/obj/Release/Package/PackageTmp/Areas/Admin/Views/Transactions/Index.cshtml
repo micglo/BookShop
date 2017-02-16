@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BookShop.Models.ViewModels.Transaction.TransactionIndexViewModel>
+
+@{
+    ViewBag.Title = "Zlecenia";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h3>@ViewBag.Title</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr/>
+    </div>
+</div>
+<div id="alertPlaceholder"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-inline">
+            <div style="padding-bottom: 15px;">
+                <span>Opcje: </span>
+                <button id="changeStatus" class="btn btn-default btn-warning" style="color: #fff"><span class="glyphicon glyphicon-pencil" title="Zmien status"></span></button>
+                <a id="details" class="btn btn-default btn-primary" style="color: #fff"><span class="glyphicon glyphicon-info-sign" title="Szczegóły"></span></a>
+                <select name="SelectStatusList" class="form-control" id="selectStatusList" style="width: 200px;" title="Pokaż według statusu zamówienia">
+                    <option value="All">Wszystkie</option>
+                    <option value="Złożona">Złożona</option>
+                    <option value="W trakcje realizacji">W trakcje realizacji</option>
+                    <option value="Zakończona">Zakończona</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="transactions">
+            @Html.Partial("GetAllByStatus", Model)
+        </div>
+    </div>
+</div>
+
+
+<div id="changeStatusModalInsert"></div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/transactionsIndex")
+}

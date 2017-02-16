@@ -1,0 +1,117 @@
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll.config
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.pdb
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.pdb
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.xml
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csprojResolveAssemblyReference.cache
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.Initial.resources
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csproj.GenerateResource.Cache
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.ForDisplay.resources
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.PageSize_BookSize_IsOptional.resources
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.BookSubMainCategory_relation.resources
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll.config
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.Initial.resources
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.ForDisplay.resources
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.PageSize_BookSize_IsOptional.resources
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.BookSubMainCategory_relation.resources
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csproj.GenerateResource.Cache
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll.config
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.initial.resources
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csproj.GenerateResource.Cache
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll.config
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csprojResolveAssemblyReference.cache
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.Initial.resources
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.NonNullableCover.resources
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csproj.GenerateResource.Cache
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll.config
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.Initial.resources
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.NonNullableCover.resources
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csproj.GenerateResource.Cache
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll.config
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.Initial.resources
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.Migrations.NonNullableCover.resources
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.csproj.GenerateResource.Cache
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data.Sql\obj\Debug\BookShop.Data.Sql.pdb

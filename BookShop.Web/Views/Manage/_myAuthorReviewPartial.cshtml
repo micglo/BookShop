@@ -1,0 +1,7 @@
+﻿@model BookShop.Data.AuthorReview
+
+<div style="padding: 5px 15px;">
+    @Html.ActionLink(Model.Author.FirstName + " " + Model.Author.LastNameForDisplay, "GetAuthor", "Author",
+                               new { id = Model.AuthorId, lastName = Model.Author.LastName }, null)
+</div>
+@Html.Action("AuthorReviewSummaryPartial", "AuthorReview", Model)

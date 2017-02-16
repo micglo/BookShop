@@ -1,0 +1,41 @@
+﻿@model BookShop.Data.Book
+
+<div class="modal fade" id="deleteBookModal" tabindex="-1" role="dialog" aria-labelledby="deleteBookModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Usuń książkę</h4>
+            </div>
+            @using (Ajax.BeginForm("DeleteBookPost", "Books", new { area = "Admin" }, new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnSuccess = "showDeleteBookResult"
+            }, new { id = "deleteBookForm" }))
+            {
+                <div class="modal-body">
+                    <div id="deleteBookResult">
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.Id, new { id = "bookId" })
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center text-danger">Czy napewno chcesz usunąc książkę: @Model.TitleForDisplay?</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Usuń" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

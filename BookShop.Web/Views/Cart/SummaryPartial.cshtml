@@ -1,0 +1,138 @@
+﻿@model BookShop.Models.ViewModels.ShoppingCart.SummaryViewModel
+    
+@if (Model.ShoppingCartLines.Any())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Nazwa produktu</th>
+                        <th class="text-center">Ilość</th>
+                        <th class="text-center">Cena</th>
+                        <th class="text-center">Wartość</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model.ShoppingCartLines)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                <div>
+                                    <b>@line.Book.TitleForDisplay</b>
+                                </div>
+
+                                @foreach (var author in line.Book.Author)
+                    {
+                                    <div>
+                                        @(author.FirstName + " " + author.LastNameForDisplay + " ")
+                                    </div>
+                                }
+                            </td>
+                            <td class="text-center">
+                                @line.Quantity
+                            </td>
+                            <td class="text-center">
+                                @line.Book.Price.ToString("c")
+                            </td>
+                            <td class="text-center">
+                                @((line.Quantity * line.Book.Price).ToString("c"))
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="text-center">&nbsp;</td>
+                        <td class="text-center">&nbsp;</td>
+                        <td class="text-center"><b>@Model.Delivery.DeliveryType</b></td>
+                        <td class="text-center">
+                            @Model.Delivery.Price.ToString("c")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">&nbsp;</td>
+                        <td class="text-center">&nbsp;</td>
+                        <td class="text-center"><b>Suma:</b></td>
+                        <td class="text-center">
+                            @Model.TotalCost.ToString("c")
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Adres dostawy:</h3>
+        </div>
+    </div>
+
+    if (Model.OtherDeliveryAddress.OtherDeliveryAddress)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <b>Pan/Pani: @Model.OtherDeliveryAddress.FirstName @Model.OtherDeliveryAddress.LastName</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <b>Ulica: @Model.OtherDeliveryAddress.Street</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <b>Miejscowosc: @Model.OtherDeliveryAddress.PostCode @Model.OtherDeliveryAddress.City</b>
+            </div>
+        </div>
+        if (!string.IsNullOrEmpty(Model.OtherDeliveryAddress.PhoneNumber))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <b>Telefon: +@Model.OtherDeliveryAddress.PhoneNumber</b>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <b>Pan/Pani: @Model.User.FirstName @Model.User.LastName</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <b>Ulica: @Model.User.Street</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <b>Miejscowosc: @Model.User.PostCode @Model.User.City</b>
+            </div>
+        </div>
+        if (!string.IsNullOrEmpty(Model.User.PhoneNumber))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <b>Telefon: +@Model.User.PhoneNumber</b>
+                </div>
+            </div>
+        }
+    }
+    <div class="row">
+        <div class="col-md-12 text-right">
+            @Html.ActionLink("Realizuj transakcje", "Checkout", null, new { @class = "btn btn-success" })
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">
+                Twój koszyk jest pusty
+            </h2>
+        </div>
+    </div>
+}

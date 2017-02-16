@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNet.Identity
+@model BookShop.Data.AuthorReview
+
+<div class="myBorder" style="margin-bottom: 15px;">
+    <div class="row">
+        <div class="col-md-4 text-left">
+            @Model.Date
+        </div>
+        <div class="col-md-2 col-md-offset-6 text-right">
+            @{
+                int i;
+                var dif = 5 - Model.ReviewRate;
+                for (i = 1; i <= Model.ReviewRate; i++)
+                {
+                    <img src="~/Images/yellowstar.png" />
+                }
+                for (int j = 1; j <= dif; j++)
+                {
+                    <img src="~/Images/whitestar.png" />
+                }
+            }
+        </div>
+    </div>
+    <div class="row" style="padding-top: 5px;">
+        <div class="col-md-12">
+            @Model.Description
+        </div>
+    </div>
+    @if (User.Identity.IsAuthenticated && Model.UserId.Equals(User.Identity.GetUserId()))
+    {
+        <div class="row" style="padding-top: 15px;">
+            <div class="col-md-1 text-left">
+                <span class="glyphicon glyphicon-remove" style="color: #800000; margin-right: 10px;" onclick="openDeleteAuthorReviewModal('@Model.Id');" title="Usuń tą recenzję"></span>
+
+                <span class="glyphicon glyphicon-pencil" style="color: #808000;" onclick="openEditAuthorReviewModal('@Model.Id', '@Model.ReviewRate');" title="Edytuj tą recenzję"></span>
+            </div>
+            <div class="col-md-11 text-right">
+                @Model.User.UserName
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row" style="padding-top: 15px;">
+            <div class="col-md-12 text-right">
+                @Model.User.UserName
+            </div>
+        </div>
+    }
+</div>
+
+

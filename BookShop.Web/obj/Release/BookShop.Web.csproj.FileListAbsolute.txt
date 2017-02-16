@@ -1,0 +1,220 @@
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\csc.exe
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\csc.exe.config
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\csc.rsp
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\csi.exe
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\csi.rsp
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\System.AppContext.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\System.Collections.Immutable.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\System.IO.FileSystem.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\System.Reflection.Metadata.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\vbc.exe
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\vbc.exe.config
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\vbc.rsp
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\VBCSCompiler.exe
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\roslyn\VBCSCompiler.exe.config
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Web.dll.config
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Web.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Web.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Antlr3.Runtime.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Common.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Data.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Data.Sql.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Models.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\EntityFramework.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\EntityFramework.SqlServer.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Cookies.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Facebook.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Google.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.OAuth.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Twitter.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Web.Infrastructure.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Newtonsoft.Json.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Ninject.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Ninject.Web.Common.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Ninject.Web.Mvc.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Owin.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\PagedList.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\PagedList.Mvc.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\SendGrid.CSharp.HTTP.Client.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\SendGrid.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Net.Http.Formatting.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Helpers.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Mvc.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Optimization.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Razor.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.WebPages.Deployment.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.WebPages.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.WebPages.Razor.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\WebActivatorEx.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\WebGrease.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Common.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Data.Sql.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Data.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Models.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Antlr3.Runtime.pdb
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Newtonsoft.Json.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Ninject.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Ninject.Web.Common.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Ninject.Web.Mvc.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\PagedList.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\PagedList.Mvc.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Net.Http.Formatting.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Helpers.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Mvc.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Optimization.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.Razor.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.WebPages.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.WebPages.Deployment.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\System.Web.WebPages.Razor.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\EntityFramework.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\EntityFramework.SqlServer.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.AspNet.Identity.Core.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Facebook.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Cookies.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.OAuth.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Google.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.Twitter.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\obj\Release\BookShop.Web.csprojResolveAssemblyReference.cache
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\obj\Release\BookShop.Web.dll
+c:\Users\Michal\Documents\Visual Studio 2015\Projects\BookShop\BookShop.Web\obj\Release\BookShop.Web.pdb
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Web.Common.dll
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Web\bin\BookShop.Web.Common.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\csc.exe
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\csc.exe.config
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\csc.rsp
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\csi.exe
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\csi.rsp
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\System.AppContext.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\vbc.exe
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\vbc.exe.config
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\vbc.rsp
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Web.dll.config
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Web.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Web.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Antlr3.Runtime.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Models.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Repository.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Service.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Web.Common.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Newtonsoft.Json.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Owin.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\PagedList.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\PagedList.Mvc.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SendGrid.CSharp.HTTP.Client.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SendGrid.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Helpers.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Mvc.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Optimization.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Razor.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.WebPages.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\WebActivatorEx.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\WebGrease.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Models.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Repository.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Service.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\BookShop.Web.Common.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Antlr3.Runtime.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Newtonsoft.Json.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\PagedList.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\PagedList.Mvc.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Helpers.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Mvc.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Optimization.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.Razor.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.WebPages.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\obj\Release\BookShop.Web.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\obj\Release\BookShop.Web.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\obj\Release\BookShop.Web.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\NLog.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\NLog.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SimpleInjector.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SimpleInjector.Integration.Web.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SimpleInjector.Integration.Web.Mvc.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SimpleInjector.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SimpleInjector.Integration.Web.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Web\bin\SimpleInjector.Integration.Web.Mvc.xml

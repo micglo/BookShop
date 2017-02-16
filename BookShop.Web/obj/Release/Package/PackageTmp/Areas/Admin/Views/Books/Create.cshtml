@@ -1,0 +1,193 @@
+﻿@model BookShop.Models.ViewModels.Books.BookPostViewModel
+  
+@{
+    ViewBag.Title = "Dodaj nową książkę";
+}
+  
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)
+            </li>
+            <li>
+                @Html.ActionLink("Books", "Index", "Books", null, null)
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h3>@ViewBag.Title</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+@using (Html.BeginForm("Create", "Books", FormMethod.Post, new {id = "createBookForm"}))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Bestseller, new { id = "bestseller" })
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Title)
+                @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = "Tytuł książki", title = "Tytuł książki, bez polskich znaków, bez spacji. Maksymalnie 100 znaków." })
+                @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TitleForDisplay)
+                @Html.TextBoxFor(m => m.TitleForDisplay, new { @class = "form-control", placeholder = "Tytuł książki", title = "Tytuł książki, który będzie wyświetlany. Maksymalnie 100 znaków." })
+                @Html.ValidationMessageFor(m => m.TitleForDisplay, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ISBN)
+                @Html.TextBoxFor(m => m.ISBN, new { @class = "form-control", placeholder = "ISBN książki", title = "ISBN książki.. Maksymalnie 13 znaków.", type = "number", min = 0 })
+                @Html.ValidationMessageFor(m => m.ISBN, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(m => m.PublishDate)
+                <div class="input-group">
+                    @Html.TextBoxFor(m => m.PublishDate, new { @class = "form-control", placeholder = "01/01/2017", title = "Data publikacji książki", id = "publishDate", type = "text",  @readonly = true })
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar" id="publishDateButton"></span>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(m => m.PublishDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Image)
+                @Html.TextBoxFor(m => m.Image, new { @class = "form-control", placeholder = "Link do zdjęcia", title = "Link do zdjęcia", type = "url" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Price)
+                @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder = "Cena książki", title = "Cena książki bez waluty", type = "number", step = "0.01", min = 0 })
+                @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Quantity)
+                @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control", placeholder = "Ilość egzemplarzy", title = "Ilość egzemplarzy", type = "number" })
+                @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(m => m.BookSize)
+                @Html.TextBoxFor(m => m.BookSize, new { @class = "form-control", placeholder = "1.23 X 2.25 x 3.05cm", title = "Format książki. Maksymalnie 20 znaków." })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(m => m.PageSize)
+                @Html.TextBoxFor(m => m.PageSize, new { @class = "form-control", placeholder = "Ilość stron książki", title = "Ilość stron książki", type = "number", min = 1 })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Description)
+                @Html.TextAreaFor(m => m.Description, new { @rows = 6, @class = "form-control", placeholder = "Opis książki", title = "Opis książki" })
+                @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 30px;">
+        <div class="col-md-2 col-md-offset-5">
+            <div class="text-center">@Html.LabelFor(m => m.Bestseller)</div>
+            <div id="slider">
+                <div id="custom-handle" class="ui-slider-handle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Language)
+                @Html.DropDownListFor(m => m.Language, Model.LanguagesSelectList, "*** Wybierz język ***", new { @class = "form-control", id = "languagesSelectList" })
+                @Html.ValidationMessageFor(m => m.Language, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Cover)
+                @Html.DropDownListFor(m => m.Cover, Model.CoversSelectList, "*** Wybierz okładkę ***", new { @class = "form-control", id = "coversSelectList" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.PublishingId, new { @for = "publishingSelectList" })
+                @Html.DropDownListFor(m => m.PublishingId, Model.PublishingSelectList, "*** Wybierz wydawnictwo ***", new { @class = "form-control", id = "publishingSelectList" })
+                @Html.ValidationMessageFor(m => m.PublishingId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Authors, new { @for = "authorSelectList" })
+                @Html.ListBoxFor(m => m.Authors, Model.AuthorSelectList, new { @class = "form-control", id = "authorSelectList" })
+                @Html.ValidationMessageFor(m => m.Authors, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.SubMainCategoryies, new { @for = "subMainCategorySelectList" })
+                @Html.ListBoxFor(m => m.SubMainCategoryies, Model.SubMainCategorySelectList, new { @class = "form-control", id = "subMainCategorySelectList" })
+                @Html.ValidationMessageFor(m => m.SubMainCategoryies, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.BookCategories, new { @for = "bookCategorySelectList" })
+                @Html.ListBoxFor(m => m.BookCategories, Model.BookCategorySelectList, new { @class = "form-control", id = "bookCategorySelectList" })
+                @Html.ValidationMessageFor(m => m.BookCategories, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 20px;">
+        <div class="col-md-12 text-right">
+            <input type="submit" class="btn btn-success" value="Dodaj" />
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Scripts/i18n/pl.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    @Scripts.Render("~/bundles/select2")
+    @Scripts.Render("~/bundles/datepicker-pl")
+    @Scripts.Render("~/bundles/adminBookForm")
+    @Scripts.Render("~/bundles/select2Default")
+    <script>
+        $(function () {
+            myFormValidation('createBookForm');
+            
+        });
+    </script>
+}

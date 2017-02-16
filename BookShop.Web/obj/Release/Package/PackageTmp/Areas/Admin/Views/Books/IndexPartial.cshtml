@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BookShop.Models.ViewModels.Books.BookIndexViewModel>
+
+<table id="booksTable" class="table">
+    <thead>
+        <tr>
+            <th class="text-center">MainCategoryName</th>
+            <th class="text-center">SubMainCategoryName</th>
+            <th class="text-center">Title</th>
+            <th class="text-center">Numer</th>
+            <th class="text-center">Tytuł</th>
+            <th class="text-center">Autorzy</th>
+            <th class="text-center">Bestseller</th>
+            <th class="text-center">Okładka</th>
+            <th class="text-center">Ilość</th>
+            <th class="text-center">Cena</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    @book.MainCategoryName
+                </td>
+                <td class="text-center">
+                    @book.SubMainCategoryName
+                </td>
+                <td class="text-center">
+                    @book.Title
+                </td>
+                <td class="text-center">
+                    @book.Id
+                </td>
+                <td class="text-center">
+                    @book.TitleForDisplay
+                </td>
+                <td class="text-center">
+                    @foreach (var author in book.Authors)
+                    {
+                        <div>
+                            @Html.ActionLink(author.FirstName + " " + author.LastNameForDisplay, "GetAuthor", "Author", new { id = author.Id, lastName = author.LastName, area = "" }, null)
+                        </div>
+                    }
+                </td>
+                <td class="text-center bestsellerResult">
+                    @if (book.Bestseller != null && book.Bestseller.Value)
+                    {
+                        <span class="glyphicon glyphicon-ok" style="color: green"></span>
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-remove" style="color: #8b0000"></span>
+                    }
+                </td>
+                <td class="text-center">
+                    @book.Cover
+                </td>
+                <td class="text-center">
+                    @book.Quantity
+                </td>
+                <td class="text-center">
+                    @book.Price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/myScripts/dataTablesDefault.js"></script>
+<script src="~/Scripts/myScripts/adminBookIndexPartial.js"></script>
+
+

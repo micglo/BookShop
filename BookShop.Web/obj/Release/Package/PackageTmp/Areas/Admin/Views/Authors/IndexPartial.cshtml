@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BookShop.Data.Author>
+
+<table id="authorsTable" class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">LastName</th>
+            <th class="text-center">Imie</th>
+            <th class="text-center">Nazwisko</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    @author.Id
+                </td>
+                <td class="text-center">
+                    @author.LastName
+                </td>
+                <td class="text-center">
+                    <span class="authorFirstName">@author.FirstName</span>
+                </td>
+                <td class="text-center">
+                    <span class="authorLastNameForDisplay">@author.LastNameForDisplay</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/myScripts/dataTablesDefault.js"></script>
+<script src="~/Scripts/myScripts/adminAuthorIndexPartial.js"></script>
+

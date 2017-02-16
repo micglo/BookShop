@@ -1,0 +1,56 @@
+﻿@model BookShop.Models.ViewModels.PublishingReview.AddPublishingReviewViewModel
+
+<div class="modal fade" id="addPublishingReviewModal" tabindex="-1" role="dialog" aria-labelledby="addPublishingReviewModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Dodaj recenzje</h4>
+            </div>
+            @using (Ajax.BeginForm("AddReviewPost", "PublishingReview", null, new AjaxOptions
+            {
+                Url = Url.Action("AddReviewPost", "PublishingReview"),
+                HttpMethod = "POST",
+                OnSuccess = "addPublishingReview"
+            }, new { id = "addPublishingReviewForm" }))
+            {
+                <div class="modal-body">
+                    <div id="addPublishingReviewResult">
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.PublishingReview.PublishingId)
+                        @Html.HiddenFor(m => m.ReturnUrl)
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.PublishingReview.ReviewRate)
+                                    @Html.Partial("_VotePartial")
+                                    @Html.TextBoxFor(m => m.PublishingReview.ReviewRate, new { @class = "form-control hidden", id = "reviewRate", title = "Zaznacz ilość gwiazdek , na która zasługuje to wydawnictwo" })
+                                    @Html.ValidationMessageFor(m => m.PublishingReview.ReviewRate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.PublishingReview.Description)
+                                    @Html.TextAreaFor(m => m.PublishingReview.Description, new { rows = 4, @class = "form-control", placeholder = "Twoja recenzja", title = "Napisz kilka słów od siebie co myślisz o tym wydawnictwie" })
+                                    @Html.ValidationMessageFor(m => m.PublishingReview.Description, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" id="addPublishingReviewButton" value="Dodaj" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\bin\Release\BookShop.Data.Sql.Scripts.dacpac
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\bin\Release\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\bin\Release\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Release\Model.xml
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Release\refactor.xml
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Release\postdeploy.sql
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Release\predeploy.sql
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Release\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data.Sql.Scripts\obj\Release\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\bin\Release\BookShop.Data.Sql.Scripts.dacpac
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\bin\Release\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\bin\Release\BookShop.Data.Sql.Scripts.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Release\BookShop.Data.Sql.Scripts.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data.Sql.Scripts\obj\Release\BookShop.Data.Sql.Scripts.pdb

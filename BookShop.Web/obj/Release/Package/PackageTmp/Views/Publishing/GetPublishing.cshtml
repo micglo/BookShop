@@ -1,0 +1,108 @@
+﻿@model BookShop.Data.Publishing
+
+@{
+    ViewBag.Title = Model.NameForDisplay;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>
+            @Model.NameForDisplay
+        </h2>
+    </div>
+</div>
+<div id="showVote">
+    <div class="col-md-12" style="padding: 0;">
+        @if (Model.PublishingReviews.Any())
+            {
+            @Html.Action("ShowVote", "PublishingReview", new { publishingId = Model.Id })
+        }
+    </div>
+</div>
+@if (Model.Description != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            @Model.Description
+        </div>
+    </div>
+}
+
+@if (Model.Books.Any())
+{
+    <div class="row" style="padding: 15px;">
+        <div class="col-md-12 myBorder">
+            @foreach (var book in Model.Books)
+            {
+                var category = book.SubMainCategories.First();
+                <a href=@Url.Action("GetSingleBook", "Books", new { mainCategoryName = category.MainCategory.Name, subMainCategoryName = category.Name, id = book.Id, title = book.Title })>
+                    <img src=@book.Image class="img-responsive img-thumbnail" alt="@book.TitleForDisplay" style="width: 20%; height: 20%;" />
+                </a>
+            }
+        </div>
+    </div>
+}
+
+<div class="row" style="padding: 15px;">
+    <div class="col-md-12 text-right">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPublishingReviewModal">
+            Dodaj recenzje
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="padding: 15px;">
+        <div id="publishingReviews">
+            @Html.Action("GetAllByPublishingId", "PublishingReview", new { publishingId = Model.Id })
+        </div>
+    </div>
+</div>
+
+@Html.Action("AddPublishingReviewModal", "PublishingReview", new { publishingId = Model.Id, returnUrl = Request.Url.PathAndQuery })
+@Html.Action("EditPublishingReviewModal", "PublishingReview")
+@Html.Action("DeletePublishingReviewModal", "PublishingReview")
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    @Scripts.Render("~/bundles/openPublishingReviewModals")
+    @Scripts.Render("~/bundles/publishing")
+    <script type="text/javascript">
+        $.validator.setDefaults({
+            ignore: []
+        });
+    </script>
+    <script>
+        function updatePublishingReviews() {
+            var url = "/PublishingReview/GetAllByPublishingId?publishingId=" + @Html.Raw(Model.Id);
+            $.get(url,
+                function(result) {
+                    $('#publishingReviews').html(result);
+                });
+        }
+
+        function updateVotes(id) {
+            var success = $('#' + id + '> div.row > div.col-md-12').find('h4.text-success');
+            if (success.length > 0) {
+                $.get('/PublishingReview/ShowVote?publishingId=' + @Html.Raw(Model.Id),
+                    function(data) {
+                        $('#showVote').html(data);
+                    });
+            }
+        }
+    </script>
+}

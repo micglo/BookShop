@@ -1,0 +1,54 @@
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.dll.config
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.csprojResolveAssemblyReference.cache
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.dll.config
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.dll.config
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Repository.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.Sql.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.Sql.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Repository\obj\Debug\BookShop.Repository.pdb

@@ -1,0 +1,52 @@
+﻿@model BookShop.Models.ViewModels.Books.BooksForMainCategoryViewModel
+
+@{
+    ViewBag.Title = Model.CurrentMainCategory.NameForDisplay;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Model.CurrentMainCategory.NameForDisplay
+            </li>
+        </ol>
+    </div>
+</div>
+@if (Model.TopFiveBooksForEachSubMainCategory.Any())
+{
+    foreach (var subMaincategory in Model.SubMainCategories)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-left">
+                    @Html.ActionLink(subMaincategory.NameForDisplay, "GetBooksBySubMainCategory", "Books", new { MainCategory = Model.CurrentMainCategory.Name,
+                    SubMainCategory = subMaincategory.Name }, new {style = "text-decoration: none; color: brown"})
+                </h2>
+            </div>
+        </div>
+        <div class="row" style="padding: 15px;">
+            <div class="col-md-12 myBorder" style="padding-bottom: 15px;">
+                @foreach (var book in Model.TopFiveBooksForEachSubMainCategory)
+                {
+                    if (book.SubMainCategories.Any(s => s.Name.Equals(subMaincategory.Name)))
+                    {
+                        @Html.Partial("_BookSummaryPartial", book)
+                    }
+                }
+            </div>
+
+        </div>
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Brak wyników</h2>
+        </div>
+    </div>
+}

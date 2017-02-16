@@ -1,0 +1,64 @@
+﻿@model BookShop.Models.ViewModels.Books.BooksForBookCategoryViewModel
+
+@{
+    ViewBag.Title = Model.CurrentMainCategory.NameForDisplay + " - " + Model.CurrentSubMainCategory.NameForDisplay + " - " + Model.CurrentBookCategory.NameForDisplay;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink(Model.CurrentMainCategory.NameForDisplay, "GetBooksByMainCategory", "Books", new { mainCategoryName = Model.CurrentMainCategory.Name }, null)
+            </li>
+            <li>
+                @Html.ActionLink(Model.CurrentSubMainCategory.NameForDisplay, "GetBooksBySubMainCategory", "Books", new
+                     {
+                         MainCategory = Model.CurrentMainCategory.Name,
+                         SubMainCategory = Model.CurrentSubMainCategory.Name
+                     }, null)
+            </li>
+            <li class="active">
+                @Model.CurrentBookCategory.NameForDisplay
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        @foreach (var bookCategory in Model.BookCategories)
+        {
+            @Html.ActionLink(bookCategory.NameForDisplay, "GetBooksByBookCategory", "Books", new
+            {
+                MainCategory = Model.CurrentMainCategory.Name,
+                SubMainCategory = Model.CurrentSubMainCategory.Name,
+                BookCategory = bookCategory.Name
+            }, new { @class = "btn btn-block btn-default btn-sm" + (bookCategory.Name == Model.CurrentBookCategory.Name ? " btn-primary" : "") })
+        }
+    </div>
+    <div class="col-md-9">
+        @if (Model.Books.Any())
+        {
+            @Html.Hidden("MainCategory", Model.CurrentMainCategory.Name, new { id = "currentMainCategory" })
+            @Html.Hidden("SubMainCategory", Model.CurrentSubMainCategory.Name, new { id = "currentSubMainCategory" })
+            @Html.Hidden("BookCategory", Model.CurrentBookCategory.Name, new { id = "currentBookCategory" })
+            @Html.Partial("_BookSelectListPartial")
+            <div id="books">
+                @Html.Partial("GetBooksByBookCategoryPartial", Model)
+            </div>
+        }
+        else
+        {
+            <h2>Brak wyników</h2>
+        }
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/commonBooks")
+    <script src="~/Scripts/myScripts/updateBooksByBookCategory.js"></script>
+}

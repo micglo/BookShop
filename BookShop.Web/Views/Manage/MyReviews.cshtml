@@ -1,0 +1,95 @@
+﻿@model BookShop.Models.ViewModels.Account.MyReviewsViewModel
+
+@{
+    ViewBag.Title = "Moje recenzje";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Moje konto", "Index", "Manage")
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            @ViewBag.Title
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-12">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#myBookReviews" aria-controls="home" role="tab" data-toggle="tab">Książki</a></li>
+            <li role="presentation"><a href="#myAuthorReviews" aria-controls="details" role="tab" data-toggle="tab">Autorzy</a></li>
+            <li role="presentation"><a href="#myPublishingReviews" aria-controls="review" role="tab" data-toggle="tab">Wydawnictwa</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="myBookReviews">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <div id="updateMyBookReviews">
+                            @Html.Partial("GetMyBookReviewsPartial", Model.MyBookReviews)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="myAuthorReviews">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <div id="updateMyAuthorReviews">
+                            @Html.Partial("GetMyAuthorReviewsPartial", Model.MyAuthorReviews)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="myPublishingReviews">
+                <div class="row" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <div id="updateMyPublishingReviews">
+                            @Html.Partial("GetMyPublishingReviewsPartial", Model.MyPublishingReviews)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action("EditAuthorReviewModal", "AuthorReview")
+@Html.Action("DeleteAuthorReviewModal", "AuthorReview")
+
+@Html.Action("EditBookReviewModal", "BookReview")
+@Html.Action("DeleteBookReviewModal", "BookReview")
+
+@Html.Action("EditPublishingReviewModal", "PublishingReview")
+@Html.Action("DeletePublishingReviewModal", "PublishingReview")
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/spinnerTabs")
+    @Scripts.Render("~/bundles/openAuthorReviewModals")
+    @Scripts.Render("~/bundles/openBookReviewModals")
+    @Scripts.Render("~/bundles/openPublishingReviewModals")
+    @Scripts.Render("~/bundles/myReviews")
+}

@@ -1,0 +1,33 @@
+﻿@model string
+
+<div class="modal fade" id="editPublishingReviewModal" tabindex="-1" role="dialog" aria-labelledby="editPublishingReviewModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Edytuj recenzje</h4>
+            </div>
+            @using (Ajax.BeginForm("EditReviewPost", "PublishingReview", null, new AjaxOptions
+            {
+                Url = Url.Action("EditReviewPost", "PublishingReview"),
+                HttpMethod = "POST",
+                OnSuccess = "editPublishingReview"
+            }, new { id = "editPublishingReviewForm"}))
+            {
+                <div class="modal-body">
+                    <div id="editPublishingReviewResult">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Zmień" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

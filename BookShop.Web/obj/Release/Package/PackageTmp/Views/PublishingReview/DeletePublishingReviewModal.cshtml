@@ -1,0 +1,36 @@
+﻿<div class="modal fade" id="deletePublishingReviewModal" tabindex="-1" role="dialog" aria-labelledby="deletePublishingReviewModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Usuń recenzje</h4>
+            </div>
+            @using (Ajax.BeginForm("DeleteReview", "PublishingReview", new AjaxOptions
+            {
+                Url = Url.Action("DeleteReview", "PublishingReview"),
+                HttpMethod = "POST",
+                OnSuccess = "deletePublishingReview"
+            }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.Hidden("publishingReviewId")
+                <div class="modal-body">
+                    <div id="deletePublishingReviewResult">
+                        Czy napewno chcesz usunąć tą recenzję?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Usuń" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

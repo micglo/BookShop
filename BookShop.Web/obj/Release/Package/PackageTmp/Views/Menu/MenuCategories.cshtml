@@ -1,0 +1,30 @@
+﻿@model BookShop.Models.ViewModels.Menu.MenuCategoriesViewModel
+
+<div class="navbar navbar-inverse navbar-static-top" style="border: none;">
+    <div class="container">
+        <ul class="nav navbar-nav col-md-12">
+            @foreach (var mainCategory in Model.MainCategories)
+            {
+                <li class="dropdown col-md-2">
+                    <a href="@Url.Action("GetBooksByMainCategory", "Books", new { mainCategoryName = mainCategory.Name })" class="dropdown-toggle">
+                        @mainCategory.NameForDisplay
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach (var subMainCategory in Model.SubMainCategories)
+                        {
+                            if (subMainCategory.MainCategory.Name.Equals(mainCategory.Name))
+                            {
+                                <li>
+                                    @Html.ActionLink(subMainCategory.NameForDisplay, "GetBooksBySubMainCategory", "Books", 
+                                    new { MainCategory = mainCategory.Name, SubMainCategory = subMainCategory.Name }, null)
+                                </li>
+                            }
+                        }
+                    </ul>
+                </li>
+            }
+            <li class="col-md-2">@Html.ActionLink("Bestsellery", "GetBestsellers", "Books", null, null)</li>
+        </ul>
+    </div>
+</div>

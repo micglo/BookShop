@@ -1,0 +1,184 @@
+﻿@using BookShop.Models.ViewModels.ShoppingCart
+@model ShoppingCartViewModel
+
+@Html.HiddenFor(m => m.ReturnUrl, new { id = "returnUrl" })
+
+@if (Model.ShoppingCartLines.Any())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <table id="cartTable" class="table">
+                <thead>
+                <tr>
+                    <th class="text-center">Nazwa produktu</th>
+                    <th class="text-center">Ilość</th>
+                    <th class="text-center">Cena</th>
+                    <th class="text-center">Wartość</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var line in Model.ShoppingCartLines)
+                {
+                    <tr>
+                        <td class="text-center">
+                            <div>
+                                <b>@line.Book.TitleForDisplay</b>
+                            </div>
+
+                            @if (line.Book.Author.Count > 1)
+                            {
+                                foreach (var author in line.Book.Author)
+                                {
+                                    <div>
+                                        @(author.FirstName + " " + author.LastNameForDisplay + ", ")
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div>
+                                    @(line.Book.Author.Select(a => a.FirstName).Single() + " " + line.Book.Author.Select(a => a.LastNameForDisplay).Single())
+                                </div>
+                            }
+                        </td>
+                        <td class="text-center">
+                            <input type="number" value="@line.Quantity" class="text-center" style="width: 55px;" max="@line.Book.Quantity" min="1" onchange="updateCartQuantity('@line.Book.Id', '@Model.ReturnUrl', event)" />
+                        </td>
+                        <td class="text-center">
+                            @line.Book.Price.ToString("c")
+                        </td>
+                        <td class="text-center">
+                            @((line.Quantity * line.Book.Price).ToString("c"))
+                        </td>
+                        <td class="text-center">
+                            @using (Ajax.BeginForm("RemoveFromCart", "Cart", new AjaxOptions
+                            {
+                                Url = Url.Action("RemoveFromCart", new { bookId = line.Book.Id, returnUrl = Model.ReturnUrl }),
+                                HttpMethod = "GET",
+                                OnSuccess = "updateCart"
+                            }))
+                            {
+                                <input class="btn btn-sm btn-warning" type="submit" value="Usuń">
+                            }
+                        </td>
+                        <td>
+                            @using (Ajax.BeginForm("RemoveAllFromCart", "Cart", new AjaxOptions
+                            {
+                                Url = Url.Action("RemoveAllFromCart", new { bookId = line.Book.Id, returnUrl = Model.ReturnUrl }),
+                                HttpMethod = "GET",
+                                OnSuccess = "updateCart"
+                            }))
+                            {
+                                <input class="btn btn-sm btn-warning" type="submit" value="Usuń wszystkie" />
+                            }
+                        </td>
+                    </tr>
+                }
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td class="text-center">&nbsp;</td>
+                    <td class="text-center">&nbsp;</td>
+                    <td class="text-center"><b>Suma:</b></td>
+                    <td class="text-center">
+                        @Model.TotalProductsValue.ToString("c")
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 10px;">
+        <div class="col-md-4">
+            <h3 class="text-center">Wysyłka</h3>
+        </div>
+        <div class="col-md-4 text-center">
+            <h3 class="text-center">Płatność</h3>
+        </div>
+        <div class="col-md-4 text-center">
+            
+        </div>
+    </div>
+    <div class="row" style="padding-top: 10px;">
+        <div class="col-md-4 text-center">
+            @foreach (var item in Model.DeliveryOptions)
+            {
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-3 text-right">
+                        @Html.RadioButtonFor(m => m.Delivery.DeliveryType, item.DeliveryType, new { onclick = "setDeliveryMethod(event);", id = item.DeliveryType })
+                    </div>
+                    <div class="col-md-8 text-left">
+                        @Html.Label(item.DeliveryType, new { @for = item.DeliveryType })
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-4 text-center">
+            @foreach (var item in Model.PaymentOptions)
+            {
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-3 text-right">
+                        @Html.RadioButtonFor(m => m.Payment.PaymentType, item.PaymentType, new { onclick = "setPayMentMethod(event);", id = item.PaymentType })
+                    </div>
+                    <div class="col-md-8 text-left">
+                        @Html.Label(item.PaymentType, new { @for = item.PaymentType })
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="row">
+                <div class="col-md-8">
+                    <b>Koszt dostawy:</b>
+                </div>
+                <div class="col-md-4">
+                    @Model.Delivery.Price.ToString("C")
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <b>Łączny koszt twoich zakupów:</b>
+                </div>
+                <div class="col-md-4">
+                    @Model.TotalCost.ToString("C")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding: 50px 0 20px 0;">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="text-center">
+                <a href="@Model.ReturnUrl" class="btn btn-primary">Kontynuj zakupy</a>
+                @Html.ActionLink("Przejdź dalej", "DeliveryData", "Cart", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text-right">
+                @using (Ajax.BeginForm("ClearCart", "Cart", new AjaxOptions
+                {
+                    Url = Url.Action("ClearCart", new { returnUrl = Model.ReturnUrl }),
+                    HttpMethod = "GET",
+                    OnSuccess = "updateCart"
+                }))
+                {
+                    <input class="btn btn-danger" type="submit" value="Wyczyść koszyk" />
+                }
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">
+                Twój koszyk jest pusty
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin-top: 10px;">
+            <a href="@Model.ReturnUrl" class="btn btn-primary">Kontynuj zakupy</a>
+        </div>
+    </div>
+}

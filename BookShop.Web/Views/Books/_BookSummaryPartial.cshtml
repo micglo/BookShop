@@ -1,0 +1,90 @@
+﻿@using BookShop.Data
+@model Book
+@if (Model.Quantity > 0)
+{
+    var category = Model.SubMainCategories.First();
+    <div class="row">
+        <div class="col-md-3" style="padding-top: 15px;">
+            <img src="@Model.Image" class="img-responsive img-thumbnail" alt="@Model.TitleForDisplay">
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-12">
+                    @{
+                        <h2 style="color: brown">
+                            @Html.ActionLink(Model.TitleForDisplay, "GetSingleBook", "Books", 
+                           new
+                           {
+                               mainCategoryName = category.MainCategory.Name, subMainCategoryName = category.Name, id = Model.Id, title = Model.Title
+                           }, new { style = "text-decoration: none; color: brown" })
+                        </h2>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @if (Model.Author.Count > 1)
+                {
+                    foreach (var author in Model.Author)
+                    {
+                            @Html.ActionLink(author.FirstName + " " + author.LastNameForDisplay, "GetAuthor", "Author",
+                                new { id = author.Id, lastName = author.LastName }, null)
+                            @:,
+                        }
+                }
+                else
+                {
+                        @Html.ActionLink(Model.Author.Select(c => c.FirstName).SingleOrDefault() + " " + Model.Author.Select(c => c.LastNameForDisplay).SingleOrDefault(),
+                            "GetAuthor", "Author", new { id = Model.Author.Select(c => c.Id).SingleOrDefault(), lastName = Model.Author.Select(c => c.LastName).SingleOrDefault() }, null)
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.ActionLink(Model.Publishing.NameForDisplay, "GetPublishing", "Publishing", new { name = Model.Publishing.Name }, null)
+                </div>
+            </div>
+            @if (Model.Bestseller != null && Model.Bestseller.Value)
+            {
+                <div class="row" style="padding-left: 15px; padding-bottom: 10px;">
+                    <div class="col-md-3 bestseller">
+                        Bestseller
+                    </div>
+                </div>
+            }
+            @if (Model.BookReviews.Any())
+            {
+                @Html.Action("ShowVote", "BookReview", new { bookId = Model.Id })
+            }
+            <div class="row">
+                <div class="col-md-12">
+                    @{
+                        var cover = Model.Cover == Cover.HardCover ? "Oprawa twarda" : "Oprawa miękka";
+                        @(Model.PublishDate.ToString("yyyy MMMM dd") + ", " + cover)
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @(Model.Description.Substring(0, 200) + "... ")
+                    @Html.ActionLink("Czytaj więcej", "GetSingleBook", "Books", 
+                   new { mainCategoryName = category.MainCategory.Name, subMainCategoryName = category.Name, id = Model.Id, title = Model.Title }, null)
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <h3 style="margin-bottom: 5px; color: brown">
+                        @Model.Price.ToString("c")
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-sm btn-success pull-right" onclick="addToCart('@Model.Id');">Dodaj do koszyka</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,73 @@
+﻿@model BookShop.Data.Publishing
+
+<div class="modal fade" id="editPublishingModal" tabindex="-1" role="dialog" aria-labelledby="editPublishingModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Zmień wydawnictwo</h4>
+            </div>
+            @using (Ajax.BeginForm("EditPublishingPost", "Publishings", new { area = "Admin" }, new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnSuccess = "showEditPublishingResult"
+            }, new { id = "editPublishingForm" }))
+            {
+                <div class="modal-body">
+                    <div id="editPublishingResult">
+                    </div>
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(m => m.Id, new { id = "publishingId" })
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Name)
+                                @Html.TextBoxFor(m => m.Name, new { rows = 4, @class = "form-control", placeholder = "Nazwa wydawnictwa", title = "Napisz nazwe wydawnictwa. Maksymalnie 100 znaków" })
+                                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.NameForDisplay)
+                                @Html.TextBoxFor(m => m.NameForDisplay, new { rows = 4, @class = "form-control", placeholder = "Nazwa wydawnictwa, którą wyświetlimy", title = "Nazwa wydawnictwa bez polskich znaków i spacji. Maksymalnie 100 znaków" })
+                                @Html.ValidationMessageFor(m => m.NameForDisplay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Image)
+                                @Html.TextBoxFor(m => m.Image, new { rows = 4, @class = "form-control", placeholder = "Link do zdjęcia", title = "Link do zdjęcia" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Description)
+                                @Html.TextAreaFor(m => m.Description, new { rows = 4, @class = "form-control", placeholder = "Opis wydawnictwa", title = "Napisz kilka słów o wydawnictwie" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Zmień" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        myFormValidation('editPublishingForm');
+    });
+</script>
+

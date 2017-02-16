@@ -1,0 +1,53 @@
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\bin\Debug\BookShop.Data.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\bin\Debug\BookShop.Data.pdb
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\obj\Debug\BookShop.Data.dll
+c:\users\michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\obj\Debug\BookShop.Data.pdb
+C:\Users\Michal\documents\visual studio 2015\Projects\BookShop\BookShop.Data\obj\Debug\BookShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\obj\Debug\BookShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\obj\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\GitHub\BookShop\BookShop.Data\obj\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\obj\Debug\BookShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\obj\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop_stary\BookShop.Data\obj\Debug\BookShop.Data.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\BookShop.Data.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\BookShop.Data.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\obj\Debug\BookShop.Data.dll
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\obj\Debug\BookShop.Data.pdb
+C:\Users\michal.glowaczewski\Documents\Projekty\bookshop\BookShop.Data\obj\Debug\BookShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\obj\Debug\BookShop.Data.dll
+C:\Users\Michal\Documents\Projekty\bookshop\BookShop.Data\obj\Debug\BookShop.Data.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\bin\Debug\BookShop.Data.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\bin\Debug\BookShop.Data.pdb
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\obj\Debug\BookShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\obj\Debug\BookShop.Data.dll
+C:\Users\Michal\Desktop\Nowy folder\bookshop\BookShop.Data\obj\Debug\BookShop.Data.pdb

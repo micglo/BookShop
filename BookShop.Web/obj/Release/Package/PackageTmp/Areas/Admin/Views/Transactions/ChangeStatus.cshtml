@@ -1,0 +1,47 @@
+﻿@model BookShop.Models.ViewModels.Transaction.ChangeStatusViewModel
+
+<div class="modal fade" id="changeStatusModal" tabindex="-1" role="dialog" aria-labelledby="changeStatusLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Zmień status zlecenia</h4>
+            </div>
+            @using (Ajax.BeginForm("ChangeStatusPost", "Transactions", null, new AjaxOptions
+            {
+                HttpMethod = "GET",
+                OnSuccess = "showChangeStatusResult"
+            }))
+            {
+                <div class="modal-body">
+                    <div id="changeStatusResult">
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.TransactionId, new { id = "transactionId" })
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center">Zlecenie nr. @Model.TransactionId</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.TransactionStatusSelectList)
+                                    @Html.DropDownList("TransactionStatus", Model.TransactionStatusSelectList, new { id = "transactionStatusList", @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <input type="submit" class="btn btn-success" value="Zmień" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

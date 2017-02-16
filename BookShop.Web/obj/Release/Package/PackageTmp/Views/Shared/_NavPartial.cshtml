@@ -1,0 +1,40 @@
+﻿<nav>
+    <div class="navbar navbar-inverse navbar-static-top" style="border: none; margin: 0;">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Kontakt", "Contact", "Home", new { area = "" }, null)</li>
+                <li>@Html.ActionLink("O stronie", "About", "Home", new { area = "" }, null)</li>
+                @*@if (User.IsInRole("Admin") || User.IsInRole("Employee"))
+                {
+                    <li>@Html.ActionLink("Zlecenia", "Index", "Transactions", new { area = "Admin" }, null)</li>
+                    <li>@Html.ActionLink("Autorzy", "Index", "Authors", new { area = "Admin" }, null)</li>
+                    <li>@Html.ActionLink("Wydawnictwa", "Index", "Publishings", new { area = "Admin" }, null)</li>
+                    <li>@Html.ActionLink("Książki", "Index", "Books", new { area = "Admin" }, null)</li>
+                }*@
+                <li>@Html.ActionLink("Zlecenia", "Index", "Transactions", new { area = "Admin" }, null)</li>
+                <li>@Html.ActionLink("Autorzy", "Index", "Authors", new { area = "Admin" }, null)</li>
+                <li>@Html.ActionLink("Wydawnictwa", "Index", "Publishings", new { area = "Admin" }, null)</li>
+                <li>@Html.ActionLink("Książki", "Index", "Books", new { area = "Admin" }, null)</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+    <div class="navbar navbar-inverse navbar-static-top" id="menu-search" style="border: none; margin: 0;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home", new { area = "" })" style="padding: 0">
+                    <img alt="Ksiegarnia" src="~/Images/Logo.jpg" style="padding-left: 15px;">
+                </a>
+            </div>
+            @Html.Action("MenuSearch", "Menu", new { area = "" })
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <span class="glyphicon glyphicon-shopping-cart" id="cartIcon" title="Pokaż moje zakupy"><span class="badge" id="cartCount"></span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    @Html.Action("MenuCategories", "Menu", new { area = "" })
+</nav>
+
+@Html.Action("CartModal", "Cart", new { area = "" })

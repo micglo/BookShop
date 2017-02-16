@@ -1,0 +1,14 @@
+﻿@using BookShop.Web.Common.Books
+@model BookShop.Models.ViewModels.Menu.MenuSearchViewModel
+
+@using (Html.BeginForm("GetBooksBySearchString", "Books", FormMethod.Get, new { @class = "navbar-form navbar-left form-inline" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.SearchString, new {@class = "sr-only"})
+        @Html.TextBoxFor(m => m.SearchString, new {@class = "form-control", placeholder = "Wpisz szukaną frazę", style = "width: 600px;"})
+    </div>
+    <div class="form-group">
+        @Html.DropDownList("SearchOption", SearchOptionSelectList.SearchOption, new {id = "searchOption", @class = "form-control"})
+    </div>
+    <button type="submit" class="btn btn-default" id ="searchButton">Szukaj</button>
+}

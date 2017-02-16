@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BookShop.Data.BookReview>
+    
+@if (Model.Any())
+{
+    foreach (var review in Model)
+    {
+        @Html.Partial("_myBookReviewPartial", review)
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            Nie wystawiłeś jeszcze żadnej recenzji
+        </div>
+    </div>
+}

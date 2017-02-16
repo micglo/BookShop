@@ -1,0 +1,70 @@
+﻿@model BookShop.Models.ViewModels.ShoppingCart.ShoppingCartViewModel
+
+@if (Model.ShoppingCartLines.Any())
+{
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="col-md-4">
+            <b>Tytuł</b>
+        </div>
+        <div class="col-md-2 text-right">
+            <b>Cena</b>
+        </div>
+        <div class="col-md-1">
+            <b>Ilość</b>
+        </div>
+        <div class="col-md-5">
+            <b>Wartość</b>
+        </div>
+    </div>
+    foreach (var line in Model.ShoppingCartLines)
+    {
+        <div class="row" style="margin-bottom: 5px;">
+            <div class="col-md-4">
+                @line.Book.TitleForDisplay
+            </div>
+            <div class="col-md-2 text-right">
+                @line.Book.Price.ToString("c")
+            </div>
+            <div class="col-md-1">
+                <input type="number" value="@line.Quantity" class="text-center" style="width: 55px;" max="@line.Book.Quantity" min="1" onchange="updateCartModalQuantity('@line.Book.Id', event)" />
+            </div>
+            <div class="col-md-2">
+                @((line.Quantity * line.Book.Price).ToString("c"))
+            </div>
+            <div class="col-md-1">
+                @using (Ajax.BeginForm("RemoveFromCartModal", "Cart", new AjaxOptions
+                {
+                    Url = Url.Action("RemoveFromCartModal", new { bookId = line.Book.Id }),
+                    HttpMethod = "GET",
+                    OnSuccess = "updateCartModal"
+                }))
+                {
+                    <input class="btn btn-sm btn-warning" type="submit" value="Usuń" />
+                }
+            </div>
+            <div class="col-md-2">
+                @using (Ajax.BeginForm("RemoveAllFromCartModal", "Cart", new AjaxOptions
+                {
+                    Url = Url.Action("RemoveAllFromCartModal", new { bookId = line.Book.Id }),
+                    HttpMethod = "GET",
+                    OnSuccess = "updateCartModal"
+                }))
+                {
+                    <input class="btn btn-sm btn-warning" type="submit" value="Usuń wszystkie" />
+                }
+            </div>
+        </div>
+
+    }
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-md-3 col-md-offset-9">
+            <p>Razem: &nbsp;&nbsp;&nbsp;@Model.TotalProductsValue.ToString("c")</p>
+        </div>
+    </div>
+}
+else
+{
+    <h2 class="text-center">
+        Twój koszyk jest pusty
+    </h2>
+}

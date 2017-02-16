@@ -1,0 +1,84 @@
+﻿@model BookShop.Models.ViewModels.Account.ManageLoginsViewModel
+@using Microsoft.Owin.Security
+
+
+@if (Model.Errors.Any())
+{
+    foreach (var error in Model.Errors)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center text-danger">@error</h4>
+            </div>
+        </div>
+    }
+}
+else
+{
+    if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center text-success">@Model.Message</h4>
+            </div>
+        </div>
+    }
+
+    if (Model.CurrentLogins.Count > 0)
+    {
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Zarejestrowane konta</h4>
+            </div>
+
+        </div>
+        foreach (var account in Model.CurrentLogins)
+        {
+            <div class="row">
+                <div class="col-md-1">
+                    <div class="zocial @account.LoginProvider.ToLower()"></div>
+                </div>
+                <div class="col-md-2">
+                    @if (Model.ShowRemoveButton)
+                        {
+                            using (Ajax.BeginForm("RemoveLogin", "Manage", FormMethod.Post, new AjaxOptions
+                            {
+                                OnSuccess = "removeLogins"
+                            }))
+                            {
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" id="loginProvider" name="loginProvider" value=@account.LoginProvider />
+                            <input type="hidden" id="providerKey" name="providerKey" value=@account.ProviderKey />
+                            <input type="submit" class="btn btn-danger" style="height: 30px; padding-top: 5px;" value="Usuń" title="Usuń możliwość logowania za pomocą @account.LoginProvider." />
+                        }
+                    }
+                </div>
+            </div>
+        }
+    }
+
+    if (Model.OtherLogins.Count > 0)
+    {
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4>Możesz dodać</h4>
+            </div>
+        </div>
+        using (Html.BeginForm("LinkLogin", "Manage"))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <div id="socialLoginList">
+                        <p>
+                            @foreach (AuthenticationDescription p in Model.OtherLogins)
+                            {
+                                <button type="submit" class="zocial @p.AuthenticationType.ToLower()" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Zaloguj się uzywając konta @p.Caption">@p.AuthenticationType</button>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}

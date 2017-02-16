@@ -1,0 +1,32 @@
+﻿@model BookShop.Data.PublishingReview
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(m => m.PublishingId)
+@Html.HiddenFor(m => m.Id)
+@Html.HiddenFor(m => m.UserId)
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(m => m.ReviewRate)
+            @Html.Partial("_VoteEditPartial")
+            @Html.TextBoxFor(m => m.ReviewRate, new { @class = "form-control hidden", id = "publishingReviewRateEdit", title = "Zaznacz ilość gwiazdek , na która zasługuje to wydawnictwo" })
+            @Html.ValidationMessageFor(m => m.ReviewRate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description)
+            @Html.TextAreaFor(m => m.Description, new { rows = 4, @class = "form-control", placeholder = "Twoja recenzja", title = "Napisz kilka słów od siebie co myślisz o to wydawnictwo. Maksymalnie 500 znaków." })
+            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        myFormValidation('editPublishingReviewForm');
+    });
+</script>

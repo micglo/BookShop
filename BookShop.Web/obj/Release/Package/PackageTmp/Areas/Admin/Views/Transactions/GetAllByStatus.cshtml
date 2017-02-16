@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BookShop.Models.ViewModels.Transaction.TransactionIndexViewModel>
+
+<table id="transactionsTable" class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Numer</th>
+            <th class="text-center">Data</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Osoba</th>
+            <th class="text-center">Wartość</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    @transaction.Id
+                </td>
+                <td class="text-center">
+                    @transaction.Date
+                </td>
+                <td class="text-center">
+                    <span class="transactionStatus">@transaction.Status</span>
+                </td>
+                <td class="text-center">
+                    @transaction.Person
+                </td>
+                <td class="text-center">
+                    @transaction.TransactionAmount
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/myScripts/dataTablesDefault.js"></script>
+<script src="~/Scripts/myScripts/transactionsByStatus.js"></script>

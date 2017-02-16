@@ -1,0 +1,26 @@
+﻿@model BookShop.Data.BookReview
+    
+<div class="row" style="padding: 5px 15px;">
+    <div class="col-md-1"><b>Tytuł:</b></div>
+    <div lass="col-md-11">
+        @Html.ActionLink(Model.Book.TitleForDisplay, "GetSingleBook", "Books",
+           new
+           {
+               mainCategoryName = Model.Book.SubMainCategories.FirstOrDefault()?.MainCategory.Name,
+               subMainCategoryName = Model.Book.SubMainCategories.FirstOrDefault()?.Name,
+               id = Model.BookId,
+               title = Model.Book.Title
+           }, null)
+    </div>
+</div>
+<div class="row" style="padding: 0 15px 5px;">
+    <div class="col-md-1"><b>Autor:</b></div>
+    <div lass="col-md-11">
+        @foreach (var author in Model.Book.Author)
+        {
+            @Html.ActionLink(author.FirstName + " " + author.LastNameForDisplay, "GetAuthor", "Author",
+                                    new { id = author.Id, lastName = author.LastName }, null)
+        }
+    </div>
+</div>
+@Html.Action("BookReviewSummaryPartial", "BookReview", Model)

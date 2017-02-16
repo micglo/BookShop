@@ -1,0 +1,88 @@
+﻿@model BookShop.Models.ViewModels.Books.BooksForSubMainCategoryViewModel
+
+@{
+    ViewBag.Title = Model.CurrentMainCategory.NameForDisplay + " - " + Model.CurrentSubMainCategory.NameForDisplay;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink(Model.CurrentMainCategory.NameForDisplay, "GetBooksByMainCategory", "Books", new { mainCategoryName = Model.CurrentMainCategory.Name }, null)
+            </li>
+            <li class="active">
+                @Model.CurrentSubMainCategory.NameForDisplay
+            </li>
+        </ol>
+    </div>
+</div>
+
+@if (Model.CurrentSubMainCategory.BookCategories.Count > 0)
+{
+    <div class="row">
+        <div class="col-md-3">
+            @foreach (var bookCategory in Model.BookCategories)
+            {
+                @Html.ActionLink(bookCategory.NameForDisplay, "GetBooksByBookCategory", "Books", new { MainCategory = Model.CurrentMainCategory.Name,
+                SubMainCategory = Model.CurrentSubMainCategory.Name, BookCategory = bookCategory.Name }, new { @class = "btn btn-block btn-default btn-sm" })
+            }
+        </div>
+        <div class="col-md-9">
+            @if (Model.TopFiveBooksForEachBookCategory.Any())
+            {
+                foreach (var bookCategory in Model.BookCategoriesWithBooks)
+                {
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-left" style="margin-top: 0;">
+                                @Html.ActionLink(bookCategory.NameForDisplay, "GetBooksByBookCategory", "Books", new { MainCategory = Model.CurrentMainCategory.Name,
+                                SubMainCategory = Model.CurrentSubMainCategory.Name, BookCategory = bookCategory.Name}, new {style = "text-decoration: none; color: brown"})
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="padding-bottom: 15px;">
+                            @foreach (var book in Model.TopFiveBooksForEachBookCategory)
+                            {
+                                if (book.BookCategories.Any(bc => bc.Name.Equals(bookCategory.Name)))
+                                {
+                                    @Html.Partial("_BookSummaryPartial", book)
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <h2>Brak wyników</h2>
+            }
+        </div>
+    </div>
+}
+else
+{
+    if (Model.Books.Any())
+    {
+        @Html.Hidden("MainCategory", Model.CurrentMainCategory.Name, new { id = "currentMainCategory" })
+        @Html.Hidden("SubMainCategory", Model.CurrentSubMainCategory.Name, new { id = "currentSubMainCategory" })
+        @Html.Partial("_BookSelectListPartial")
+        <div id="books">
+            @Html.Partial("GetBooksBySubMainCategoryPartial", Model)
+        </div>
+    }
+    else
+    {
+        <h2>Brak wyników</h2>
+    }
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/commonBooks")
+    <script src="~/Scripts/myScripts/updateBooksBySubMainCategory.js"></script>
+}
+

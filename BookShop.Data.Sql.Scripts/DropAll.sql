@@ -1,0 +1,67 @@
+﻿DELETE FROM BookBookCategory
+GO
+DELETE FROM AuthorBook
+GO
+DELETE FROM Author
+GO
+DELETE FROM BookCategory
+GO
+DELETE FROM BookReview
+GO
+DELETE FROM Publishing
+GO
+DELETE FROM Book
+GO
+DELETE FROM SubMainCategory
+GO
+DELETE FROM MainCategory
+GO
+
+DELETE FROM AspNetUserRoles
+GO
+DELETE FROM AspNetRoles
+GO
+DELETE FROM AspNetUserClaims
+GO
+DELETE FROM AspNetUserLogins
+GO
+DELETE FROM AspNetUsers
+GO
+DELETE FROM __MigrationHistory
+GO
+
+
+
+DROP TABLE BookBookCategory
+GO
+DROP TABLE AuthorBook
+GO
+DROP TABLE Author
+GO
+DROP TABLE BookCategory
+GO
+DROP TABLE BookReview
+GO
+DROP TABLE Book
+GO
+DROP TABLE Publishing
+GO
+DROP TABLE SubMainCategory
+GO
+DROP TABLE MainCategory
+GO
+
+DROP TABLE AspNetUserRoles
+GO
+DROP TABLE AspNetRoles
+GO
+DROP TABLE AspNetUserClaims
+GO
+DROP TABLE AspNetUserLogins
+GO
+DROP TABLE AspNetUsers
+GO
+DROP TABLE __MigrationHistory
+GO
+
+

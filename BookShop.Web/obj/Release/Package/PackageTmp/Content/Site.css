@@ -1,0 +1,101 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /*padding-top: 50px;*/
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #080808;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav li {
+    text-align: center;
+}
+
+.navbar-nav li a {
+    padding-left: 0;
+}
+
+#cartIcon  {
+    padding-top: 10px;
+    padding-right: 15px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+
+#spinner {
+    background: url("/Content/img/blue_spinner.gif") no-repeat center scroll;
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.bestseller {
+    background: rgb(131, 193, 0); 
+    vertical-align: middle; 
+    text-align: center; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    color: white; 
+    border-radius: 4px;
+}
+
+.help-block ul {
+    list-style: none;
+}
+
+.ratingStar {
+    cursor: pointer;
+}
+
+.myBorder {
+    padding: 15px;
+    border: 1px solid #ccc;
+} 
+
+#cartCount {
+    font-size: 12px;
+    background: #c67605;
+    color: #fff;
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+.select2-search__field {
+    width: 100% !important;
+}

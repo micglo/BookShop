@@ -1,0 +1,74 @@
+﻿@model BookShop.Models.ViewModels.Account.ResendEmailConfirmationViewModel
+@{
+    ViewBag.Title = "Aktywacja konta";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Logowanie", "Login")
+            </li>
+            <li>
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            @ViewBag.Title
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+<div id="message"></div>
+
+<div class="row">
+    @using (Ajax.BeginForm("ResendEmailConfirmation", "Account", null, new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnSuccess = "showMessage"
+    }, new { id = "resendEmailConfirmationForm"} ))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-4 col-md-offset-2">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Adres email", title = "Twój adres email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Hasło", title = "Twóje hasło" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-2 col-md-offset-5 text-center">
+            <input type="submit" value="Prześlij" class="btn btn-success" />
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/tooltip")
+    <script>
+        $(function () {
+            myFormValidation('resendEmailConfirmationForm');
+        });
+    </script>
+}

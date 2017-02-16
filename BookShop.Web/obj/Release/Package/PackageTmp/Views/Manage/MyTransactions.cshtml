@@ -1,0 +1,121 @@
+﻿@model IEnumerable<BookShop.Models.ViewModels.Transaction.MyTransactionsViewModel>
+
+@{
+    ViewBag.Title = "Moje transakcje";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Moje konto", "Index", "Manage")
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            @ViewBag.Title
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+@if (Model.Any())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <table id="myTransactionsTable" class="table">
+                <thead>
+                <tr>
+                    <th class="text-center">Numer</th>
+                    <th class="text-center">Data</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Wartość</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var transaction in Model)
+                {
+                    <tr>
+                        <td class="text-center">
+                            @transaction.Id
+                        </td>
+                        <td class="text-center">
+                            @transaction.Date
+                        </td>
+                        <td class="text-center">
+                            @transaction.Status
+                        </td>
+                        <td class="text-center">
+                            @transaction.TransactionAmount
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    @section scripts
+    {
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        @Scripts.Render("~/bundles/dataTablesDefault")
+        <script>
+            $(document)
+                .ready(function() {
+                    var table = $('#myTransactionsTable')
+                        .DataTable({
+                            "order": [[1, "desc"]]
+                        });
+
+                    $('#myTransactionsTable tbody').on('click', 'tr', function () {
+                        if ($(this).hasClass('selected')) {
+                            $(this).removeClass('selected');
+                        } else {
+                            table.$('tr.selected').removeClass('selected');
+                            $(this).addClass('selected');
+                        }
+                    });
+
+                    //$("div.toolbar").html('<div style="padding-bottom: 15px;"><span>Opcje: </span><a id="add" class="btn btn-dt btn-default"><span class="glyphicon glyphicon-plus" title="Dodaj"></span></a>&nbsp;' +
+                    //    '<a id="edit" class="btn btn-dt btn-default"><span class="glyphicon glyphicon-pencil" title="Edytuj"></span></a>&nbsp;' +
+                    //    '<a id="preview" class="btn btn-dt btn-default"><span class="glyphicon glyphicon-eye-open" title="Podgląd"></span></a>&nbsp;' +
+                    //    '<a id="copy" class="btn btn-dt btn-default"><span class="glyphicon glyphicon-file" title="Kopiuj"></span></a>&nbsp;' +
+                    //    '<a id="rename" class="btn btn-dt btn-default"><span class="glyphicon glyphicon-font" title="Zmień nazwę"></span></a>&nbsp;' +
+                    //    '<a id="delete" class="btn btn-dt btn-default"><span class="glyphicon glyphicon-trash" title="Usuń"></span></a>&nbsp;</div>');
+
+                    $('#myTransactionsTable tbody')
+                        .on('dblclick',
+                            'tr',
+                            function() {
+                                $('#spinner').fadeIn("fast");
+                                var data = table.row(this).data();
+                                $(this).addClass('selected');
+                                window.location = '/MojeTransakcje/' + data[0];
+                            });
+                });
+        </script>
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12 text-center text-danger">
+            <h3> Nie zrealizowałeś jeszcze żadnej transakcji</h3>
+        </div>
+    </div>
+}
+

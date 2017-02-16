@@ -1,0 +1,44 @@
+﻿@model BookShop.Models.ViewModels.Books.BooksBySearchStringViewModel
+    
+@{
+    ViewBag.Title = "Szukaj";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+@if (Model.Books.Any())
+{
+    @Html.HiddenFor(m => m.CurrentSearchString, new { id = "searchStringHidden" })
+    @Html.HiddenFor(m => m.CurrentSearchOption, new { id = "searchOptionHidden" })
+    @Html.Partial("_BookSelectListPartial") //todo usunac submit z formy
+    <div id="books">
+        @Html.Partial("GetBooksBySearchStringPartial", Model)
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                Nie udało się nam wyszukać przedmiotów związanych z fraza: @Model.CurrentSearchString
+            </h3>
+            Spróbuj użyć innej frazy.
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/commonBooks")
+    <script src="~/Scripts/myScripts/updateBooksBySearchString.js"></script>
+}

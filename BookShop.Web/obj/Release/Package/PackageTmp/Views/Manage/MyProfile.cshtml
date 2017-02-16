@@ -1,0 +1,143 @@
+﻿@model BookShop.Data.ApplicationUser
+
+@{
+    ViewBag.Title = "Moj profil";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Moje konto", "Index", "Manage")
+            </li>
+            <li class="active">
+                @ViewBag.Title
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">
+            @ViewBag.Title
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr />
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.FirstName))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Label("Imie i nazwisko")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @Model.FirstName @Model.LastName
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Label("Adres do wysyłki")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.Label("Ulica")
+        </div>
+        <div class="col-md-6">
+            @Html.Label("Miejscowość")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Model.Street
+        </div>
+        <div class="col-md-6">
+            @Model.City
+        </div>
+    </div>
+    if (!string.IsNullOrEmpty(Model.PhoneNumber))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                @Html.Label("Kod pocztowy")
+            </div>
+            <div class="col-md-6">
+                @Html.Label("Telefon")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Model.PostCode
+            </div>
+            <div class="col-md-6">
+                @Model.PhoneNumber
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                @Html.Label("Kod pocztowy")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @Model.PostCode
+            </div>
+        </div>
+    }
+    if (Model.IsCompany)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                @Html.Label("Nazwa firmy")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @Model.CompanyName
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.Label("NIP")
+            </div>
+            <div class="col-md-6">
+                @Html.Label("REGON")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Model.Nip
+            </div>
+            <div class="col-md-6">
+                @Model.Regon
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-center text-danger"> Nie usupełniłeś jeszcze swojego profilu.</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @Html.ActionLink("Zrób to teraz", "UpdateMyProfileData");
+        </div>
+    </div>
+}

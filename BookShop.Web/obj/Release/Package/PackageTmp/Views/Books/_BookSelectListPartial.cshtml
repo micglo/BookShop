@@ -1,0 +1,17 @@
+﻿@using BookShop.Web.Common.Books
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            Ilość wyników na stronie
+            @Html.DropDownList("ItemsPerPage", ItemsPerPageSelectList.ItemsPerPage, new { id = "itemsPerPageList", @class = "form-control" })
+        </div>
+    </div>
+    <div class="col-md-3 col-md-offset-6">
+        <div class="form-group">
+            Sortuj wyniki
+            @Html.DropDownList("SortOrder", SortOrderSelectList.SortOrder, new { id = "sortOrderList", @class = "form-control" })
+        </div>
+    </div>
+</div>

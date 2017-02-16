@@ -1,0 +1,24 @@
+﻿@using BookShop.Data
+@model IEnumerable<AuthorReview>
+
+@if (Model.Any())
+{
+    foreach (var review in Model)
+    {
+        @Html.Partial("_AuthorReviewSummaryPartial", review)
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12 text-center">
+            Ten autor nie ma jeszcze wystawionej recenzji.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            Możesz być pierwszą osobą, która doda opinie.
+        </div>
+    </div>
+}
+
