@@ -1,9 +1,0 @@
-Aplikacja webowa w oparciu o framework Asp.Net MVC. Jako konektor bazy danych wykorzystano EntityFramework. Zarządzanie użytkownikami
-za pomocą Asp.Net Identity. Logowanie błędów NLog. Aplikacja dodatkowy wykorzystuje dwie zewnętrzne biblioteki JS - Select2 oraz DataTables.
-Bootstrap jako framework CSS. JQuery do akcji AJAX'owych(wiekszość akcji kontrolerów). Walidacja form za pomocą jQuery Validation, 
-a właściwie przy użyciu biblioteki dostarczonej przez MS Microsoft.jQuery.Unobtrusive.Validation. Dodatkowo logowanie za pomocą Facebook'a
-oraz Google.
-
-
-Link do aplikacji online.
-https://bookshopmvc.azurewebsites.net/

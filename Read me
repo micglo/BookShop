@@ -1,0 +1,28 @@
+Aplikacja webowa w oparciu o framework Asp.Net MVC. Jako konektor bazy danych wykorzystano EntityFramework. Zarządzanie użytkownikami
+za pomocą Asp.Net Identity. Logowanie błędów NLog. Aplikacja dodatkowy wykorzystuje dwie zewnętrzne biblioteki JS - Select2 oraz DataTables.
+Bootstrap jako framework CSS. JQuery do akcji AJAX'owych(wiekszość akcji kontrolerów). Walidacja form za pomocą jQuery Validation, 
+a właściwie przy użyciu biblioteki dostarczonej przez MS Microsoft.jQuery.Unobtrusive.Validation. Dodatkowo logowanie za pomocą Facebook'a
+oraz Google.
+
+-Rejestrowanie nowego konta(link aktywacyjny na adres email)
+-Zarządzanie kontem(zmiena hasla, logowanie przez serwis zewnętrzny(fb, google)
+-Logowanie przez serwis zewnętrzny(fb, google)
+-Logowanie blędów aplikacji
+-Autoryzacja użytkowników
+-Admin area(przestrzen dostepna tylko dla użytkowników z rola admina)
+-Wyszukiwanie książek
+-Stronicowanie wyników
+-Sortowanie wyników 
+-Ustawienie limitu wyświetlania wyników
+-System oceniania i recenzji autorów, wydawnictw i ksiązek(CRUD)
+-CRUD autorów, książek, wydawnictw
+-Dynamiczny koszyk zakupów
+-Wybór opcji dostawy, formy płatności, adresu doręczenia
+-Wyliczanie kosztów,
+-Zarządzanie transakcjami
+-Lista zrealizowanych transakcji
+-Przegląd statusów transakcji
+
+
+Link do aplikacji online.
+https://bookshopmvc.azurewebsites.net/
